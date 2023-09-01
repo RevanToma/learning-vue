@@ -77,6 +77,11 @@ export default {
       this.friends = this.friends.filter((friend) => friend.id !== friendId);
     },
     addUserData(name, age) {
+      if (isNaN(age)) {
+        alert("Please provide a valid age");
+        return;
+      }
+
       const newUser = {
         id: new Date().toISOString(),
         name,

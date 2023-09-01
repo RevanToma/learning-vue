@@ -2,7 +2,7 @@
   <section>
     <div class="active-users" :key="name" v-if="id">
       <h2>Name: {{ name }}</h2>
-      <h3>Age: {{ age }}</h3>
+      <h3>Age: {{ age }} Years</h3>
       <button v-if="name" @click="$emit('deleteUser', this.id)">
         Delete User
       </button>
@@ -19,7 +19,7 @@ export default {
       type: String,
     },
     age: {
-      type: String,
+      type: Number,
       required: true,
     },
   },
